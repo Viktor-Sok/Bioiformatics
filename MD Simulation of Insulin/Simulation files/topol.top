@@ -1,0 +1,49 @@
+;
+;	File 'topol.top' was generated
+;	By user: h123456 (1000)
+;	On host: h123456-Aspire-E1-571G
+;	At date: Wed May 19 15:20:00 2021
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2021.1 (-:
+;	
+;	Executable:   /home/Programs/Gromacs/bin/gmx
+;	Data prefix:  /home/Programs/Gromacs
+;	Working dir:  /home/h123456/Programs/Gromacs/Insulin
+;	Command line:
+;	  gmx pdb2gmx -f insulin.pdb -o insulin_pdb2gmx.gro -water spce
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "oplsaa.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+
+; Include water topology
+#include "oplsaa.ff/spce.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "oplsaa.ff/ions.itp"
+
+[ system ]
+; Name
+INSULIN in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_B     1
+SOL         10919
+NA               2
