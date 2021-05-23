@@ -2,6 +2,8 @@
 
 ## Objectives
 Predicting pXC50 value which is associated with the SLC6A4 gene.
+## Descriptors (features of the machine learning model) used 
+Morrgan fingerprints generated from SMILES by RDKit tool
 ## Tools used
 RDKit, Scikit-Learn, TensorFlow, Keras
 ## Model description
