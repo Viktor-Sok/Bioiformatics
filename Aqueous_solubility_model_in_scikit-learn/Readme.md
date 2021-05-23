@@ -2,6 +2,8 @@
 
 ## Objectives
  Estimating the aqueous solubility of a compound directly from its structure.
+## Descriptors (features of the machine learning model) used 
+Molecular weight, number of rotatable bonds, relative proportion of aromatic molecules, partition coefficient logP
 ## Tools used
 RDKit, Scikit-Learn
 ## Model description
