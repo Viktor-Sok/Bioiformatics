@@ -1,4 +1,5 @@
-# Summary of the QSAR model
+# Summary of the QSAR model (more information in Aqueous_solubility_model.ipynb notebook)
+
 ## Objectives
  Estimating the aqueous solubility of a compound directly from its structure.
 ## Tools used
